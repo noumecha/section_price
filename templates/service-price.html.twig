@@ -16,9 +16,9 @@
 #}
 <div {{attributes.addClass(['d-flex','flex-column','justify-content-center'])}}>
   {% if content.service_type %}
-    <div {{ region_attributes.service_type.addClass("") }}>
+    <h1 {{ region_attributes.service_type.addClass("") }}>
       <strong> {{ content.service_type }} </strong>
-    </div>
+    </h1>
   {% endif %}
   {% if content.description %}
     <div {{ region_attributes.description.addClass("") }}>
@@ -26,8 +26,8 @@
     </div>
   {% endif %}
   {% if content.service_price %}
-    <div {{ region_attributes.service_price.addClass("") }}>
+    <h2 {{ region_attributes.service_price.addClass("") }}>
       {{ content.service_price }}
-    </div>
+    </h2>
   {% endif %}
 </div>
