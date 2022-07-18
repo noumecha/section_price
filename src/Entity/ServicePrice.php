@@ -182,7 +182,7 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
       # end service_price
       # service_type : provide a select item list for servicie type 
     $fields['service_type'] = BaseFieldDefinition::create('list_string')
-    ->setLabel(t(' Selectionné un type de service '))
+    ->setLabel(t(' Type de service '))
     ->setRequired(TRUE)
     ->setDescription(t(' permet de choisir parmis plusieurs services présents par défaut '))
     ->setSetting('allowed_values', [
