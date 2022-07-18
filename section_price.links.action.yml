@@ -1,0 +1,5 @@
+service_price.add_form:
+  route_name: entity.service_price.add_form
+  title: 'Add service-price'
+  appears_on:
+    - entity.service_price.collection

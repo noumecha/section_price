@@ -1,0 +1,5 @@
+administer service-price:
+  title: 'Administer service-price settings'
+  restrict access: true
+access service-price overview:
+  title: 'Access service-price overview page'

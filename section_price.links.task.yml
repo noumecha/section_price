@@ -1,0 +1,22 @@
+entity.service_price.settings:
+  title: Settings
+  route_name: entity.service_price.settings
+  base_route: entity.service_price.settings
+entity.service_price.view:
+  title: View
+  route_name: entity.service_price.canonical
+  base_route: entity.service_price.canonical
+entity.service_price.edit_form:
+  title: Edit
+  route_name: entity.service_price.edit_form
+  base_route: entity.service_price.canonical
+entity.service_price.delete_form:
+  title: Delete
+  route_name: entity.service_price.delete_form
+  base_route: entity.service_price.canonical
+  weight: 10
+entity.service_price.collection:
+  title: service-price
+  route_name: entity.service_price.collection
+  base_route: system.admin_content
+  weight: 10

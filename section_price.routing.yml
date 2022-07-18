@@ -1,0 +1,7 @@
+entity.service_price.settings:
+  path: 'admin/structure/service-price'
+  defaults:
+    _form: '\Drupal\section_price\Form\ServicePriceSettingsForm'
+    _title: 'service-price'
+  requirements:
+    _permission: 'administer service-price'

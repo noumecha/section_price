@@ -1,0 +1,10 @@
+entity.service_price.settings:
+  title: service-price
+  description: Configure a service-price entity type
+  route_name:  entity.service_price.settings
+  parent: system.admin_structure
+entity.service_price.collection:
+  title: service-prices
+  description: List of service-prices
+  route_name: entity.service_price.collection
+  parent: system.admin_content
