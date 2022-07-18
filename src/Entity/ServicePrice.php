@@ -169,11 +169,11 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
     ->setLabel(t(' Selectionné un type de service '))
     ->setRequired(TRUE)
     ->setDescription(t(' permet de choisir parmis plusieurs services présents par défaut '))
-    ->setSetting('string', [
-      'VIP',
-      'Illimité',
-      'Basique',
-      'Connexion Domaine'
+    ->setSetting('allowed_values', [
+      'vip' => 'VIP',
+      'illimite' => 'Illimité',
+      'basique' => 'Basique',
+      'connexion_domaine' => 'Connexion Domaine'
     ])
     ->setDisplayOptions('view', [
       'label' => 'above'
