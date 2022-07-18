@@ -1,0 +1,2 @@
+import "@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/hotlock/molecule/service-testimony.scss";
+import '@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/hotlock/js/testimony-counter.js'
