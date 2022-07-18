@@ -14,8 +14,20 @@
  * @see template_preprocess_service_price()
  */
 #}
-<article{{ attributes }}>
-  {% if content %}
-    {{- content -}}
+<div {{attributes.addClass(['d-flex','flex-column','justify-content-center'])}}>
+  {% if content.service_type %}
+    <div {{ region_attributes.service_type.addClass("") }}>
+      <strong> {{ content.service_type }} </strong>
+    </div>
   {% endif %}
-</article>
+  {% if content.description %}
+    <div {{ region_attributes.description.addClass("") }}>
+      {{ content.description }}
+    </div>
+  {% endif %}
+  {% if content.service_price %}
+    <div {{ region_attributes.service_price.addClass("") }}>
+      {{ content.service_price }}
+    </div>
+  {% endif %}
+</div>
