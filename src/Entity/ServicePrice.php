@@ -159,7 +159,7 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayOptions('view', [
         'type' => 'text_default',
-        'label' => 'above',
+        'label' => 'hidden',
         'weight' => 10,
       ])
       ->setDisplayConfigurable('view', TRUE);
@@ -175,7 +175,7 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayOptions('view', [
         'type' => 'text_default',
-        'label' => 'above',
+        'label' => 'hidden',
         'weight' => 10,
       ])
       ->setDisplayConfigurable('view', TRUE);
@@ -192,12 +192,13 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
       'connexion_domaine' => 'Connexion Domaine'
     ])
     ->setDisplayOptions('view', [
-      'label' => 'above'
+      'label' => 'hidden',
+      'weight' => 10,
     ])
     ->setDisplayOptions('form', [
       'type' => 'options_select',
       'settings' => [],
-      'weight' => -3
+      'weight' => 10
     ])->setDisplayConfigurable('form', TRUE)->setDisplayConfigurable('view', TRUE);
       # end service_type 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
