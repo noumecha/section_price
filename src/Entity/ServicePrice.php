@@ -70,6 +70,22 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
   }
 
   /**
+   * provude a getters for my custom field
+   * {@inheritdoc}
+   */
+  public function getPrice() {
+    return $this->get('service_price')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getServiceType()
+  {
+    return $this->get('service_type')->value;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function setTitle($title) {
@@ -148,9 +164,9 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
       ])
       ->setDisplayConfigurable('view', TRUE);
       # service_price : provide the description field
-      $fields['service_price'] = BaseFieldDefinition::create('text_long')
+    $fields['service_price'] = BaseFieldDefinition::create('text_long')
       ->setTranslatable(TRUE)
-      ->setLabel(t('Price'))
+      ->setLabel(t('Prix'))
       ->setDescription(t('A Price of a service'))
       ->setDisplayOptions('form', [
         'type' => 'text_textarea',
@@ -165,7 +181,7 @@ class ServicePrice extends ContentEntityBase implements ServicePriceInterface {
       ->setDisplayConfigurable('view', TRUE);
       # end service_price
       # service_type : provide a select item list for servicie type 
-    $fields['lirairy'] = BaseFieldDefinition::create('list_string')
+    $fields['service_type'] = BaseFieldDefinition::create('list_string')
     ->setLabel(t(' Selectionné un type de service '))
     ->setRequired(TRUE)
     ->setDescription(t(' permet de choisir parmis plusieurs services présents par défaut '))
